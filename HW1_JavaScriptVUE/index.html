@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interno</title>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <a href="index.html">
+                <img src="img/Logo.png" alt="Interno Logo">
+            </a>
+            <nav>
+                <a href="#">Домой</a>
+                <a href="#">Проект</a>
+                <a href="#">Блог</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <img src="img/banner.png" alt="Banner Image" class="banner">
+            <div class="hero-content">
+                <h1>Пусть ваш дом<br>будет уникальным</h1>
+                <p>Существует много вариантов Lorem Ipsum,<br> которые можно использовать</p>
+                <button>
+                    Начать
+                    <img src="img/arrow.svg" alt="Arrow">
+                </button>
+            </div>
+        </section>
+        <section class="projects">
+            <h2>Следите за нашими проектами</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="img/project1.png" alt="Современная кухня">
+                    <h3>Современная кухня</h3>
+                    <p>Декор / Планировка</p>
+                </div>
+                <div class="project">
+                    <img src="img/project2.png" alt="Современная кухня">
+                    <h3>Современная кухня</h3>
+                    <p>Декор / Планировка</p>
+                </div>
+                <div class="project">
+                    <img src="img/project3.png" alt="Современная кухня">
+                    <h3>Современная кухня</h3>
+                    <p>Декор / Планировка</p>
+                </div>
+                <div class="project">
+                    <img src="img/project4.png" alt="Современная кухня">
+                    <h3>Современная кухня</h3>
+                    <p>Декор / Планировка</p>
+                </div>
+            </div>
+        </section>
+        <section class="stats">
+            <div class="stat">
+                <h3>12</h3>
+                <p>Лет опыта</p>
+            </div>
+            <div class="stat">
+                <h3>85</h3>
+                <p>Успешных проектов</p>
+            </div>
+            <div class="stat">
+                <h3>15</h3>
+                <p>Проектов в работе</p>
+            </div>
+            <div class="stat">
+                <h3>95</h3>
+                <p>Счастливых клиентов</p>
+            </div>
+        </section>
+        <section class="articles">
+            <h2>Статьи & Новости</h2>
+            <div class="article-grid">
+                <div class="article">
+                    <img src="img/article1.png" alt="Создадим лучший макет перепланировки">
+                    <h3>Создадим лучший макет перепланировки</h3>
+                    <p>26 Декабрь, 2022</p>
+                </div>
+                <div class="article">
+                    <img src="img/article2.png" alt="Лучшие интерьерные идеи по низкой цене">
+                    <h3>Лучшие интерьерные идеи по низкой цене</h3>
+                    <p>22 Декабрь, 2022</p>
+                </div>
+                <div class="article">
+                    <img src="img/article3.png" alt="Лучшие интерьерные решения для офисов">
+                    <h3>Лучшие интерьерные решения для офисов</h3>
+                    <p>25 Декабрь, 2022</p>
+                </div>
+            </div>
+        </section>
+    </div>
+        <footer>
+            <a href="index.html">
+                <img src="img/Logo.png" alt="Interno Logo">
+            </a>
+            <div>
+                <a href="#">Домой</a>
+                <a href="#">Проект</a>
+                <a href="#">Блог</a>
+            </div>
+            <address>
+                <p>55 East Birchwood Ave. Brooklyn, New York 11201</p>
+                <p>contact@interno.com</p>
+                <p>(123) 456 - 7890</p>
+            </address>
+        </footer>
+        <div id="app">
+            <button @click="changeText"> {{textButton}} </button>
+            <br>
+            <ul>
+                <li v-for="item in listItems" @click="deleteItem">
+                    {{item}}
+                </li>
+            </ul>
+            <button @click="addItem">Добавить</button>
+        </div>
+    
+        <!-- версия для разработки, отображает полезные предупреждения в консоли -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
+        <script>
+            //         Фреймворк Vue.js
+            // Урок 2. Семинар: Введение в Vue.js
+            // По заданному макету https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?type=design&node-id=101-14&t=hPokjgMtIgcsYlyO-0 создать верстку главной страницы
+            // (без использования vue)
+    
+            // Задачи по vue
+    
+            // 1. Создать кнопку "Перевернуть". 
+            // При клике на кнопку текст кнопки, должен перевернуться и отобразиться в обратном порядке.
+    
+            // 2. есть список элементов. Пользователь может добавлять новые элементы 
+            // списка с текстом “Новый элемент списка” нажав на кнопку "Добавить".
+    
+            // 3. * При клике на элемент списка он должен быть удален. (по желанию)
+    
+    
+    
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    textButton: 'Перевернуть',
+                    listItems: ['элемент 1'],
+                    newListItemText: 'Новый элемент списка',
+                },
+                methods: {
+                    changeText() {
+    
+                        this.textButton = this.textButton.split('').reverse().join('');
+                        // console.log(this.textButton);
+                    },
+    
+                    addItem() {
+                        this.listItems.push(this.newListItemText + ' ' + this.listItems.length);
+                        // console.log(this.listItems);
+                    },
+    
+                    deleteItem() {
+                        // Удаляем всегда последний элемент
+                        this.listItems.pop();
+                    },
+                },
+            });
+    
+        </script>
+</body>
+</html>

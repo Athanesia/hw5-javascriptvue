@@ -1,0 +1,148 @@
+body {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header img {
+    max-width: 177px;
+    max-height: 50px;
+}
+
+nav a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: #292F36;
+    font-size: 20px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.hero .banner {
+    align-items: center;
+
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #292F36;
+}
+
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 65px;
+    margin: 0 0 65px 0;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #4D5053;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #fff;
+    color: #292F36;
+    font-size: 20px;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero button img {
+    margin-left: 10px;
+}
+
+.projects, .articles {
+    padding: 50px 20px;
+}
+
+.projects h2, .articles h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-grid, .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project, .article {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.project img, .article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project h3, .article h3 {
+    margin: 15px 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.stat {
+    font-size: 24px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer img.footer-logo {
+    max-width: 177px;
+    max-height: 50px;
+}
+
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
