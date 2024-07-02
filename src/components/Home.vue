@@ -1,16 +1,6 @@
 <template>
     <div class="home">
         <div class="container">
-        <header>
-            <a href="index.html">
-                <img src="img/Logo.png" alt="Interno Logo">
-            </a>
-            <nav>
-                <a href="#">Домой</a>
-                <a href="#">Проект</a>
-                <a href="#">Блог</a>
-            </nav>
-        </header>
         <section class="hero">
             <img src="img/banner.png" alt="Banner Image" class="banner">
             <div class="hero-content">
@@ -187,6 +177,9 @@
   </template>
   
   <script>
+  import Header from './Header.vue';
+  import Footer from './Footer.vue';
+
   export default {
     name: 'HomePage'
   };

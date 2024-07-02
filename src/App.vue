@@ -1,30 +1,24 @@
 <template>
   <div id="app">
-    <Home />
-    <Project />
-    <Blog />
+    <Header />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue';
-import Project from './components/Project.vue';
-import Blog from './components/Blog.vue';
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    Home,
-    Project,
-    Blog
+    Header,
+    Footer
   }
 }
 </script>
 
 <style lang="scss">
 @import './assets/style.css';
-
-#app {
-  /* Ваши стили для #app */
-}
 </style>
