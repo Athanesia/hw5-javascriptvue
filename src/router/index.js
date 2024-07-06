@@ -10,25 +10,25 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'HomePage',
     component: Home
   },
   {
     path: '/blog',
-    name: 'Blog',
+    name: 'BlogPage',
     component: Blog
   },
   {
     path: '/project',
-    name: 'Project',
+    name: 'ProjectPage',
     component: Project
   }
 ];
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+  mode: 'history', // используем HTML5 History API для чистых URL
+  base: process.env.BASE_URL, // базовый путь приложения, берется из переменной окружения BASE_URL
+  routes // массив маршрутов, определенных выше
 });
 
 export default router;
